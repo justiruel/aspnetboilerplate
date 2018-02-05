@@ -1,0 +1,2 @@
+- pengganti edmx -> Irepository
+- kalau ada error ceknya di : D:\PROJECT\RISET\aspnetboilerplate\be-dotnetcore\src\VDI.Demo.Web.Host\App_Data\Logs
