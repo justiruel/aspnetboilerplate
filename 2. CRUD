@@ -1,0 +1,17 @@
+## step 1
+### VDI.Demo.Application.Shared/Belajar --> membuat interface (Abstract class)
+- IMsBelajarAppService.cs  
+### VDI.Demo.Application.Shared/Dto --> membuat input atau output class/model dari interface
+- BelajarListDto.cs 
+- CreateBelajarInput.cs
+## step 2
+### VDI.Demo.Application/Belajar --> implementasi dari inteface 
+- MsBelajarAppService.cs
+### VDI.Demo.Application --> jika di <b>MsBelajarAppService.cs</b> ada input.MapTo<MS_Belajar>() maka harus CreatMap di bawah ini :
+- CustomDtoMapper.cs
+```
+// from CreateBelajarInput to MS_Belajar
+configuration.CreateMap<CreateBelajarInput, MS_Belajar>();
+// from MS_Belajar to BelajarListDto
+configuration.CreateMap<MS_Belajar, BelajarListDto>();
+```
