@@ -1,0 +1,25 @@
+## Step 1
+### VDI.Demo.Core/Authorization
+- AppPermissions.cs tambahkan kode berikut :
+```
+public const string Pages_Belajar = "Pages.Belajar";
+```
+- AppAuthorizationProvider.cs tambahkan :
+```
+var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
+pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
+pages.CreateChildPermission(AppPermissions.Pages_Belajar, L("Belajar"));
+```
+## Step 2
+### VDI.Demo.Application/Belajar
+- MsBelajarAppService.cs tambahkan :
+```
+[AbpAuthorize(AppPermissions.Pages_Belajar)]
+```
+More info : https://aspnetboilerplate.com/Pages/Documents/Authorization <br />
+### Database 
+- dbo.Permissions tambah record :
+```
+Id	CreationTime	              CreatorUserId	Discriminator	        IsGranted	Name	        TenantId	    RoleId	UserId
+80	2018-02-02 13:59:53.4394644	NULL	        RolePermissionSetting	1	        Pages.Belajar	1	            2	      1
+```
