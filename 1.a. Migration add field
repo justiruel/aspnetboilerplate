@@ -1,0 +1,19 @@
+## Contoh kasus
+- VDI.Demo.Application\Organizations\OrganizationUnitAppService.cs --> <OrganizationUnit> <br/>
+kalau kita buka model nya (OrganizationUnit.cs) dia berupa metadata dan tidak bisa di edit, bagaimana jika kita ingin add field di table OrganizationUnit?<br/>
+caranya adalah meng-extend class OrganizationUnit
+## Langkah
+- Buat model, misal di VDI.Demo.Core\Belajar (OrganizationUnitAddField.cs)
+- daftarkan di VDI.Demo.EntityFrameworkCore/EntityframeworkCore/DemoDbContext.cs
+```
+public virtual DbSet<OrganizationUnitField> OrganizationUnitField { get; set; }
+```
+- Add migration
+```
+add-migration "tambah fieldTambahan di OrganizationUnitField"
+```
+- Update Database
+```
+update-database
+```
+- cek database table OrganizationUnits, field sudah ditambahkan.
