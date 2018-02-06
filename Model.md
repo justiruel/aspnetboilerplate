@@ -15,7 +15,7 @@ namespace VDI.Demo.Belajar
         public string nama { get; set; }
         [StringLength(umurLength, ErrorMessage = "Name cannot be longer than 40 characters.")]
         public string umur { get; set; }
-        public int? umur { get; set; } // --> means return value can be null or integer.  kalo di database == allow null, klo gapake database "?" artinya not null
+        public int? umur { get; set; } // --> means return value can be null or integer.  kalo di database == allow null, klo gapake "?" artinya not null
         
         //dibawah ini artinya di table MS_belajar kita buat field "PersonId" yang merupakan foreign key dari
         //table Person
