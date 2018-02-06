@@ -19,10 +19,26 @@ namespace VDI.Demo.Belajar
         
         //dibawah ini artinya di table MS_belajar kita buat field "PersonId" yang merupakan foreign key dari
         //table Person
-        [ForeignKey("PersonId")]  --> primary key di table Person
-        public virtual Person Person { get; set; }
-        public virtual int PersonId { get; set; }
+        [ForeignKey("PersonId")]  --> foreign key di table MS_Belajar
+        public Person Person { get; set; }
+        public int PersonId { get; set; }
  
+    }
+}
+
+```
+
+## Sample Model Person
+
+```
+namespace VDI.Demo.Belajar
+{
+    [Table("Person")] //---> define table
+    public class Person : FullAuditedEntity
+    {
+        [key]
+        public int id_person { get; set; }
+         public string data { get; set; }
     }
 }
 
