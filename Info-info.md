@@ -4,3 +4,4 @@
 - check default user login (userID = 2, pass = 123qwe): <br/>
 VDI.Demo.EntityFrameworkCore\Migrations\Seed\Host --> HostRoleAndUserCreator.cs 
 - Contoh CRUD ambil dari => D:\PROJECT\RISET\aspnetboilerplate\MobileEmployeeServicesAdministrator\src\VDI.Demo.Application\EmployeeServices\MS_BisnisUnits
+- DELETE /api/services/app/Vehicle/DeleteVehicle --> jika diberi nama DeleteVehicle maka rest methodnya akan menjadi "DELETE" <br/> jika diberi nama GETVehicle rest methodnya akan menjadi "GET" dan seterusnya, jika tidak ada identifikasi kusus misal TestVehicle maka akan menjadi "POST"
