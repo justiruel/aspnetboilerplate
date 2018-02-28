@@ -17,3 +17,5 @@ var role = new Role(AbpSession.TenantId, input.Role.DisplayName) { IsDefault = i
 input.TenantId = AbpSession.TenantId 
 ```
 
+## LOG
+D:\PROJECT\VISIONET\WEB\BACKEND\VSTS\MobileEmployeeServicesAdministrator\src\VDI.Demo.Web.Host\App_Data\Logs
