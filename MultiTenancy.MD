@@ -58,3 +58,9 @@ user.TenantId = AbpSession.TenantId;
 ```
 
 
+# links
+- https://aspnetboilerplate.com/Pages/Documents/Zero/User-Management
+- https://stackoverflow.com/questions/47670680/multi-tenant-authentication-imusthavetenant-entity-in-asp-net-boilerplate-modul
+- https://aspnetboilerplate.com/Pages/Documents/Data-Filters#disable-filters
+- https://aspnetboilerplate.com/Pages/Documents/Multi-Tenancy
+- https://aspnetboilerplate.com/Pages/Documents/Zero/Tenant-Management
